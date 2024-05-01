@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".successPasscode"
+    android:background="@drawable/background2">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30sp"
+        app:srcCompat="@drawable/home"
+        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/logo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif"
+        android:text="Ongoing Elections"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <!-- Placeholder for Presidential Elections -->
+    <LinearLayout
+        android:id="@+id/presidential_layout"
+        android:layout_width="326dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        tools:ignore="TextSizeCheck">
+
+        <TextView
+            android:id="@+id/presidential_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Presidential Elections"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/presidential_candidate_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="3 Candidates"
+            android:textColor="#ACABAB"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,RtlHardcoded,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/presidential_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="View Candidates"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+
+    </LinearLayout>
+
+    <!-- Placeholder for DPR RI Elections -->
+
+    <LinearLayout
+        android:id="@+id/dpr_ri_layout"
+        android:layout_width="326dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dpr_ri_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DPR RI Elections"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/dpr_ri_candidate_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 Candidates"
+            android:layout_marginLeft="10dp"
+            android:textColor="#ACABAB"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <Button
+            android:id="@+id/dpr_ri_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="View Candidates"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+    </LinearLayout>
+
+    <!-- Placeholder for DPRD Elections -->
+    <LinearLayout
+        android:id="@+id/dprd_layout"
+        android:layout_width="326dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dprd_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DPRD Elections"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/dprd_candidate_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4 Candidates"
+            android:textColor="#ACABAB"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <Button
+            android:id="@+id/dprd_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="View Candidates"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+    </LinearLayout>
+
+</LinearLayout>

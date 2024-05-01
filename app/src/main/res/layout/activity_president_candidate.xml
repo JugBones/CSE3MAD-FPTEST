@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".successPasscode"
+    android:background="@drawable/background2">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30sp"
+        app:srcCompat="@drawable/home"
+        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/logo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif"
+        android:text="Ongoing Elections"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/candidate1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="1. Anies &amp; Muhaimin"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <!-- Placeholder for Candidate 1 -->
+    <LinearLayout
+        android:id="@+id/candidate1_layout"
+        android:layout_width="354dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        tools:ignore="TextSizeCheck">
+
+        <Button
+            android:id="@+id/view_button"
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="View Profile"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+
+        <Button
+            android:id="@+id/vote_button"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Vote"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/candidate2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="1. Prabowo &amp; Gibran"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <!-- Placeholder for Candidate 2 -->
+
+    <LinearLayout
+        android:id="@+id/candidate2_layout"
+        android:layout_width="354dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        tools:ignore="TextSizeCheck">
+
+        <Button
+            android:id="@+id/view2_button"
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="View Profile"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+
+        <Button
+            android:id="@+id/vote2_button"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Vote"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/candidate3_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="1. Ganjar &amp; Mahfud"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <!-- Placeholder for Candidate 3 -->
+
+    <LinearLayout
+        android:id="@+id/candidate3_layout"
+        android:layout_width="354dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        tools:ignore="TextSizeCheck">
+
+        <Button
+            android:id="@+id/view3_button"
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="View Profile"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+
+        <Button
+            android:id="@+id/vote3_button"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Vote"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+
+    </LinearLayout>
+
+</LinearLayout>
