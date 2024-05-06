@@ -14,9 +14,7 @@ import javax.annotation.Nullable;
 
 public class qrcodePage extends AppCompatActivity {
 
-
     Button scanner_btn;
-
     TextView textView;
 
     @Override
@@ -38,15 +36,17 @@ public class qrcodePage extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-
-        IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode,resultCode, data);
-        if (intentResult != null){
+        IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (intentResult != null) {
             String contents = intentResult.getContents();
-            if (contents != null){
-                textView.setText(intentResult.getContents());
+            if (contents != null) {
+                // Start the OnGoingElections activity with the scanned data
+                Intent intent = new Intent(qrcodePage.this, OnGoingElections.class);
+                intent.putExtra("QR_DATA", contents);
+                startActivity(intent);
             }
         } else {
-            super.onActivityResult(requestCode,resultCode, data);
+            super.onActivityResult(requestCode, resultCode, data);
         }
     }
 }

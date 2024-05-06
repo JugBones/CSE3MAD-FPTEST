@@ -54,9 +54,9 @@
     <!-- Placeholder for Candidate 1 -->
     <LinearLayout
         android:id="@+id/candidate1_layout"
-        android:layout_width="354dp"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_gravity="center"
         android:layout_marginTop="5dp"
         android:orientation="horizontal"
         tools:ignore="TextSizeCheck">

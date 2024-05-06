@@ -16,4 +16,35 @@
         tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints"
         tools:layout_editor_absoluteX="84dp"
         tools:layout_editor_absoluteY="136dp" />
+
+    <!-- Placeholder for Candidate 1 -->
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints,TextSizeCheck"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="507dp">
+
+        <Button
+            android:id="@+id/lgn_button"
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Login"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+
+        <Button
+            android:id="@+id/sgn_button"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Sign Up"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
