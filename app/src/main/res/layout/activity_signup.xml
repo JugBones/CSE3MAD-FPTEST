@@ -9,6 +9,16 @@
     android:gravity="center"
     android:background="@drawable/background">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="137dp"
+        android:layout_height="111dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30sp"
+        app:srcCompat="@drawable/home"
+        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +46,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/signup_username"
+                android:id="@+id/signup_ktp"
                 android:background="@color/white"
                 android:layout_marginTop="20dp"
                 android:padding="8dp"

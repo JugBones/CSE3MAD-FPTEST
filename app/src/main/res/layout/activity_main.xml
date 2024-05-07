@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:backgroundTint="#C3DD1919"
             android:text="Login"
             tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
@@ -43,6 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:backgroundTint="#C3DD1919"
             android:text="Sign Up"
             tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
