@@ -68,6 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:backgroundTint="#F81616"
             android:text="View Candidates"
             tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
@@ -108,8 +109,9 @@
             android:id="@+id/dpr_ri_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#F81616"
             android:text="View Candidates"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
@@ -149,8 +151,9 @@
             android:id="@+id/dprd_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#F81616"
             android:text="View Candidates"
             tools:ignore="HardcodedText,RtlHardcoded" />
 

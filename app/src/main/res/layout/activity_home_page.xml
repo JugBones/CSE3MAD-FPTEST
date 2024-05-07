@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="212dp"
+        android:layout_height="204dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/home"
+        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+    <!-- Placeholder for button -->
+
+    <LinearLayout
+        android:id="@+id/homebtn_placeholder"
+        android:layout_width="400dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/background3">
+
+        <LinearLayout
+            android:id="@+id/profilebtn_layout"
+            android:layout_width="150dp"
+            android:layout_height="145dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp">
+
+            <ImageButton
+                android:id="@+id/prof_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/profile_btn"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scanbtn_layout"
+            android:layout_width="150dp"
+            android:layout_height="145dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/scan_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/scan_btn"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

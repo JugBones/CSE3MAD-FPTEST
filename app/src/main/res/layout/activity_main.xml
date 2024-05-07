@@ -17,7 +17,7 @@
         tools:layout_editor_absoluteX="84dp"
         tools:layout_editor_absoluteY="136dp" />
 
-    <!-- Placeholder for Candidate 1 -->
+    <!-- Placeholder button -->
     <LinearLayout
         android:id="@+id/main_layout"
         android:layout_width="330dp"

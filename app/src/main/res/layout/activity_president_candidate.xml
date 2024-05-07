@@ -58,7 +58,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:backgroundTint="#FFFFFF"
             android:text="View Profile"
+            android:textColor="@color/black"
             tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
         <Button
@@ -67,6 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:backgroundTint="#F81616"
             android:text="Vote"
             tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
@@ -78,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:text="1. Prabowo &amp; Gibran"
+        android:text="2. Prabowo &amp; Gibran"
         android:textColor="@color/white"
         android:textSize="23sp"
         tools:ignore="HardcodedText,RtlHardcoded" />
@@ -100,6 +103,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:backgroundTint="#FFFFFF"
             android:text="View Profile"
             tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
@@ -109,6 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:backgroundTint="#F81616"
             android:text="Vote"
             tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
@@ -120,7 +126,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:text="1. Ganjar &amp; Mahfud"
+        android:text="3. Ganjar &amp; Mahfud"
         android:textColor="@color/white"
         android:textSize="23sp"
         tools:ignore="HardcodedText,RtlHardcoded" />
@@ -142,6 +148,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="@color/black"
             android:text="View Profile"
             tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
@@ -151,6 +159,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:backgroundTint="#F81616"
             android:text="Vote"
             tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
