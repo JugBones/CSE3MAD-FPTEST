@@ -2,7 +2,6 @@ package com.example.fptest;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,22 +18,16 @@ public class HomePage extends AppCompatActivity {
         ImageButton scanButton = findViewById(R.id.scan_btn);
 
         // Set click listeners
-        profileButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Start the ProfileActivity when the profile button is clicked
-                Intent profileIntent = new Intent(HomePage.this, ProfilePage.class);
-                startActivity(profileIntent);
-            }
+        profileButton.setOnClickListener(v -> {
+            // Start the ProfileActivity when the profile button is clicked
+            Intent profileIntent = new Intent(HomePage.this, ProfilePage.class);
+            startActivity(profileIntent);
         });
 
-        scanButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Start the QRCodeActivity when the scan button is clicked
-                Intent scanIntent = new Intent(HomePage.this, qrcodePage.class);
-                startActivity(scanIntent);
-            }
+        scanButton.setOnClickListener(v -> {
+            // Start the QRCodeActivity when the scan button is clicked
+            Intent scanIntent = new Intent(HomePage.this, qrcodePage.class);
+            startActivity(scanIntent);
         });
     }
 }
