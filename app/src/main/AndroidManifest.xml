@@ -35,9 +35,6 @@
             android:name=".qrcodePage"
             android:exported="false" />
         <activity
-            android:name=".statusTps"
-            android:exported="false" />
-        <activity
             android:name=".successPasscode"
             android:exported="false" />
         <activity

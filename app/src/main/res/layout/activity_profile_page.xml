@@ -72,14 +72,14 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <!-- KTP Image -->
-            <ImageView
-                android:id="@+id/ktp_image"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginBottom="24dp"
-                android:scaleType="centerCrop"
-                tools:ignore="ContentDescription" />
+<!--            &lt;!&ndash; KTP Image &ndash;&gt;-->
+<!--            <ImageView-->
+<!--                android:id="@+id/ktp_image"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:layout_marginBottom="24dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                tools:ignore="ContentDescription" />-->
 
             <!-- Buttons to Navigate to Other Pages -->
 

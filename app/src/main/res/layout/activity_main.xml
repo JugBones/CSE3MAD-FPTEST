@@ -8,16 +8,16 @@
     tools:context=".MainActivity">
 
 
+    <!-- Placeholder button -->
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="242dp"
-        android:layout_height="283dp"
+        android:layout_width="189dp"
+        android:layout_height="203dp"
         app:srcCompat="@drawable/home"
         tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="136dp" />
+        tools:layout_editor_absoluteX="111dp"
+        tools:layout_editor_absoluteY="143dp" />
 
-    <!-- Placeholder button -->
     <LinearLayout
         android:id="@+id/main_layout"
         android:layout_width="330dp"
@@ -26,7 +26,7 @@
         android:orientation="horizontal"
         tools:ignore="MissingConstraints,TextSizeCheck"
         tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="507dp">
+        tools:layout_editor_absoluteY="438dp">
 
         <Button
             android:id="@+id/lgn_button"
