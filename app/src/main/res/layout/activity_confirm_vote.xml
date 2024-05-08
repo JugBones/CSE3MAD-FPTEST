@@ -62,7 +62,7 @@
         tools:ignore="TextSizeCheck">
 
         <Button
-            android:id="@+id/cancel_button"
+            android:id="@+id/cancels_button"
             android:layout_width="154dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -72,7 +72,7 @@
             tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
         <Button
-            android:id="@+id/vote_button"
+            android:id="@+id/votes_button"
             android:layout_width="149dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"

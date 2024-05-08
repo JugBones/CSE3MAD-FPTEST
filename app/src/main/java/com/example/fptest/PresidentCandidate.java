@@ -14,7 +14,13 @@ public class PresidentCandidate extends AppCompatActivity {
         setContentView(R.layout.activity_president_candidate);
 
         Button view_profile = findViewById(R.id.view_button);
+        Button vote_candidate1 = findViewById(R.id.vote_button);
+        Button vote_candidate2 = findViewById(R.id.vote2_button);
+        Button vote_candidate3 = findViewById(R.id.vote3_button);
 
         view_profile.setOnClickListener(v -> startActivity(new Intent(PresidentCandidate.this, ConfirmVote.class)));
+        vote_candidate1.setOnClickListener(v -> startActivity(new Intent(PresidentCandidate.this, successVote.class)));
+        vote_candidate2.setOnClickListener(v -> startActivity(new Intent(PresidentCandidate.this, successVote.class)));
+        vote_candidate3.setOnClickListener(v -> startActivity(new Intent(PresidentCandidate.this, successVote.class)));
     }
 }

@@ -1,52 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
 
     <!-- Placeholder button -->
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="189dp"
-        android:layout_height="203dp"
+        android:layout_width="214dp"
+        android:layout_height="238dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
         app:srcCompat="@drawable/home"
-        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="143dp" />
+        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
 
     <LinearLayout
         android:id="@+id/main_layout"
-        android:layout_width="330dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints,TextSizeCheck"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="438dp">
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/lgn_button"
-            android:layout_width="154dp"
+            android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
             android:backgroundTint="#C3DD1919"
             android:text="Login"
             tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
         <Button
             android:id="@+id/sgn_button"
-            android:layout_width="149dp"
+            android:layout_width="114dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
             android:backgroundTint="#C3DD1919"
             android:text="Sign Up"
             tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

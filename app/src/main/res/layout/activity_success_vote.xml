@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/red"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/success_logo"
+        android:layout_width="146dp"
+        android:layout_height="155dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@drawable/success_icon"
+        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/successvote_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:text="Succesfully Vote" />
+
+    <Button
+        android:id="@+id/goto_poll_btn"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#872B2B"
+        android:text="Live Polling" />
+
+
+</LinearLayout>
