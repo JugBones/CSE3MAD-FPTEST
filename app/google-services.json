@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "386660871372",
+    "project_id": "fptest-bf385",
+    "storage_bucket": "fptest-bf385.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386660871372:android:5fe6865cc5ed374156a669",
+        "android_client_info": {
+          "package_name": "com.example.fptest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIX-ZN0Y4LG4kVFmvdZS8Z_8lI29hB6AA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
