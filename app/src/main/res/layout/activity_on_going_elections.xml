@@ -9,12 +9,14 @@
     tools:context=".successPasscode"
     android:background="@drawable/background2">
 
+
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:layout_marginTop="30sp"
+        android:layout_marginTop="10sp"
         app:srcCompat="@drawable/home"
         tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
 
@@ -49,7 +51,7 @@
             android:layout_marginTop="20dp"
             android:text="Presidential Elections"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
         <TextView
@@ -59,17 +61,18 @@
             android:layout_marginLeft="10dp"
             android:text="3 Candidates"
             android:textColor="#ACABAB"
-            android:textSize="16sp"
+            android:textSize="14sp"
             tools:ignore="HardcodedText,RtlHardcoded,TextContrastCheck" />
 
         <Button
             android:id="@+id/presidential_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="123dp"
+            android:layout_height="32dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="#F81616"
-            android:text="View Candidates"
+            android:textSize="10sp"
+            android:text="View"
             tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
     </LinearLayout>
@@ -107,13 +110,14 @@
 
         <Button
             android:id="@+id/dpr_ri_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="123dp"
+            android:layout_height="32dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="#F81616"
-            android:text="View Candidates"
-            tools:ignore="HardcodedText,RtlHardcoded" />
+            android:textSize="10sp"
+            android:text="View"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
     </LinearLayout>
 
@@ -149,14 +153,30 @@
 
         <Button
             android:id="@+id/dprd_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="123dp"
+            android:layout_height="32dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="#F81616"
-            android:text="View Candidates"
-            tools:ignore="HardcodedText,RtlHardcoded" />
+            android:textSize="10sp"
+            android:text="View"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/home_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/home_btn"
+        tools:ignore="ContentDescription" />
 
 </LinearLayout>

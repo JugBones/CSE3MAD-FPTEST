@@ -79,7 +79,7 @@
                 android:layout_height="200dp"
                 android:layout_marginBottom="24dp"
                 android:scaleType="centerCrop"
-                android:background=""
+                android:background="@color/white"
                 tools:ignore="ContentDescription" />
 
             <!-- Upload Button -->

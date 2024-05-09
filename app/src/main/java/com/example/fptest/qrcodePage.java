@@ -3,6 +3,7 @@ package com.example.fptest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -24,7 +25,9 @@ public class qrcodePage extends AppCompatActivity {
 
         scanner_btn = findViewById(R.id.scanner);
         textView = findViewById(R.id.textscanner);
+        ImageButton Home_Btn = findViewById(R.id.home_btn);
 
+        Home_Btn.setOnClickListener(v -> startActivity(new Intent(qrcodePage.this, HomePage.class)));
         scanner_btn.setOnClickListener(v -> {
             IntentIntegrator intentIntegrator = new IntentIntegrator(qrcodePage.this);
             intentIntegrator.setOrientationLocked(true);

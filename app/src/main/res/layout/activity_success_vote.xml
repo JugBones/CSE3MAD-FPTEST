@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/red"
+    android:background="@drawable/background2"
     tools:context=".MainActivity">
 
     <ImageView
@@ -33,8 +33,22 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="150dp"
-        android:backgroundTint="#872B2B"
+        android:backgroundTint="#B83030"
         android:text="Live Polling" />
 
+    <ImageButton
+        android:id="@+id/home_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/home_btn"
+        tools:ignore="ContentDescription" />
 
 </LinearLayout>
