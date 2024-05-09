@@ -71,9 +71,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="#F81616"
-            android:textSize="10sp"
             android:text="View"
-            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+            android:textSize="10sp"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded,TouchTargetSizeCheck" />
 
     </LinearLayout>
 
@@ -95,7 +95,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
         <TextView
@@ -105,7 +105,7 @@
             android:text="5 Candidates"
             android:layout_marginLeft="10dp"
             android:textColor="#ACABAB"
-            android:textSize="16sp"
+            android:textSize="14sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
         <Button
@@ -115,9 +115,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="#F81616"
-            android:textSize="10sp"
             android:text="View"
-            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+            android:textSize="10sp"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded,TouchTargetSizeCheck" />
 
     </LinearLayout>
 
@@ -138,7 +138,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="20sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
         <TextView
@@ -148,7 +148,7 @@
             android:text="4 Candidates"
             android:textColor="#ACABAB"
             android:layout_marginLeft="10dp"
-            android:textSize="16sp"
+            android:textSize="14sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
         <Button
@@ -158,25 +158,44 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="#F81616"
-            android:textSize="10sp"
             android:text="View"
-            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+            android:textSize="10sp"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded,TouchTargetSizeCheck" />
 
     </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/home_btn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="16dp"
-        android:adjustViewBounds="true"
-        android:backgroundTint="#00FFFFFF"
-        android:scaleType="fitCenter"
-        android:src="@drawable/home_btn"
-        tools:ignore="ContentDescription" />
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="122dp"
+        android:layout_height="83dp"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp"
+            android:adjustViewBounds="true"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back_btn"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/home_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp"
+            android:adjustViewBounds="true"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home_btn"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    </LinearLayout>
 
 </LinearLayout>

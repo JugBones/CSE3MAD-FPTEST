@@ -16,8 +16,10 @@ public class OnGoingElections extends AppCompatActivity {
 
         Button Pres_Btn = findViewById(R.id.presidential_button);
         ImageButton Home_Btn = findViewById(R.id.home_btn);
+        ImageButton Back_Btn = findViewById(R.id.back_btn);
 
         Pres_Btn.setOnClickListener(v -> startActivity(new Intent(OnGoingElections.this, PresidentCandidate.class)));
         Home_Btn.setOnClickListener(v -> startActivity(new Intent(OnGoingElections.this, HomePage.class)));
+        Back_Btn.setOnClickListener(v -> startActivity(new Intent(OnGoingElections.this, HomePage.class)));
     }
 }
