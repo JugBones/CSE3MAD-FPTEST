@@ -26,6 +26,6 @@ public class PresidentCandidate extends AppCompatActivity {
         vote_candidate2.setOnClickListener(v -> startActivity(new Intent(PresidentCandidate.this, successVote.class)));
         vote_candidate3.setOnClickListener(v -> startActivity(new Intent(PresidentCandidate.this, successVote.class)));
         Home_Btn.setOnClickListener(v -> startActivity(new Intent(PresidentCandidate.this, HomePage.class)));
-        Back_Btn.setOnClickListener(v -> startActivity(new Intent(PresidentCandidate.this, HomePage.class)));
+        Back_Btn.setOnClickListener(v -> startActivity(new Intent(PresidentCandidate.this, OnGoingElections.class)));
     }
 }
