@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.storage.FirebaseStorage;
@@ -40,7 +41,6 @@ public class ProfilePage extends AppCompatActivity {
     private Uri filePath;
     private ActivityResultLauncher<Intent> imagePickerLauncher;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +60,9 @@ public class ProfilePage extends AppCompatActivity {
         if (user != null) {
             String email = user.getEmail();
             emailText.setText(email);
+
+            // Load the KTP photo from Firebase Storage
+            loadKtpPhoto(user.getUid());
         }
 
         // Initialize the image picker launcher
@@ -101,28 +104,11 @@ public class ProfilePage extends AppCompatActivity {
         });
     }
 
-
     private void selectImage() {
-        // Open the gallery or camera to select an image
+        // Open the gallery to select an image
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         intent.setType("image/*");
         imagePickerLauncher.launch(intent);
-    }
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
-            filePath = data.getData();
-            try {
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
-                ktpImageView.setImageBitmap(bitmap);
-                uploadImageToFirebase();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     private void uploadImageToFirebase() {
@@ -146,6 +132,20 @@ public class ProfilePage extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+    }
+
+    private void loadKtpPhoto(String uid) {
+        // Reference to the stored KTP photo
+        StorageReference ref = storageReference.child("ktp_images/" + uid + ".jpg");
+
+        // Retrieve and load the image into the ImageView
+        ref.getDownloadUrl().addOnSuccessListener(uri -> {
+            // Load the image into the ImageView using an image loading library (e.g., Glide, Picasso)
+            Glide.with(this).load(uri).into(ktpImageView);
+        }).addOnFailureListener(e -> {
+            // Handle the error if the download fails
+            Toast.makeText(ProfilePage.this, "Failed to load KTP photo: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        });
     }
 
     @Override
