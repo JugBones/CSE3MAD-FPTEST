@@ -64,8 +64,8 @@ public class PresidentCandidate extends AppCompatActivity {
     }
 
     // Helper function to increment votes
-    private void incrementVote(DatabaseReference candidateVotes) {
-        candidateVotes.runTransaction(new Transaction.Handler() {
+    private void incrementVote(DatabaseReference candidate1Votes) {
+        candidate1Votes.runTransaction(new Transaction.Handler() {
             @Override
             public Transaction.Result doTransaction(MutableData currentData) {
                 Integer currentVotes = currentData.getValue(Integer.class);
@@ -77,6 +77,7 @@ public class PresidentCandidate extends AppCompatActivity {
                 currentData.setValue(currentVotes);
                 return Transaction.success(currentData);
             }
+
 
             @Override
             public void onComplete(DatabaseError error, boolean committed, DataSnapshot currentData) {
