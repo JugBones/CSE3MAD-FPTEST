@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background2"
+    tools:context=".LivePolling">
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30sp"
+        app:srcCompat="@drawable/home"
+        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/logo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif"
+        android:text="Live Polling Results"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <!-- Candidate 1 Results -->
+    <TextView
+        android:id="@+id/candidate1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Candidate 1: Anies - Muhaimin"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/candidate1TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <!-- Candidate 2 Results -->
+    <TextView
+        android:id="@+id/candidate2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Candidate 2: Prabowo - Gibran"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/candidate2TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <!-- Candidate 3 Results -->
+    <TextView
+        android:id="@+id/candidate3_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Candidate 3: Ganjar - Mahfud"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/candidate3TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <!-- Back and Home Buttons -->
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="122dp"
+        android:layout_marginTop="15dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp"
+            android:adjustViewBounds="true"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back_btn"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/home_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp"
+            android:adjustViewBounds="true"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home_btn"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+</LinearLayout>
