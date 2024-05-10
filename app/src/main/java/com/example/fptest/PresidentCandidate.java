@@ -80,9 +80,10 @@ public class PresidentCandidate extends AppCompatActivity {
 
             @Override
             public void onComplete(DatabaseError error, boolean committed, DataSnapshot currentData) {
-                // Handle completion or errors here (e.g., logging)
                 if (error != null) {
-                    // Log or handle error
+                    System.err.println("Database Error: " + error.getMessage());
+                } else {
+                    System.out.println("Transaction completed successfully, committed: " + committed);
                 }
             }
         });
