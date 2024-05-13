@@ -13,10 +13,8 @@ public class ConfirmVote extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm_vote);
 
-        Button voting_btn = findViewById(R.id.votes_button);
         Button cancel_btn = findViewById(R.id.cancels_button);
 
         cancel_btn.setOnClickListener(v -> startActivity(new Intent(ConfirmVote.this, PresidentCandidate.class)));
-        voting_btn.setOnClickListener(v -> startActivity(new Intent(ConfirmVote.this, successVote.class)));
     }
 }

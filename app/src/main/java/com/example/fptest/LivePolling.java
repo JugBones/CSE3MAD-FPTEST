@@ -1,6 +1,8 @@
 package com.example.fptest;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +27,9 @@ public class LivePolling extends AppCompatActivity {
         candidate1TextView = findViewById(R.id.candidate1TextView);
         candidate2TextView = findViewById(R.id.candidate2TextView);
         candidate3TextView = findViewById(R.id.candidate3TextView);
+        ImageButton home_Btn = findViewById(R.id.home_btn);
+
+        home_Btn.setOnClickListener(v -> startActivity(new Intent(LivePolling.this, HomePage.class)));
 
         // Reference to the "election/candidates" node in Firebase
         DatabaseReference candidatesRef = FirebaseDatabase.getInstance().getReference("candidates/PresCandidates");

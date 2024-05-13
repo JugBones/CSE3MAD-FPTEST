@@ -54,7 +54,7 @@
     <!-- Placeholder for Candidate 3 -->
     <LinearLayout
         android:id="@+id/candidate3_layout"
-        android:layout_width="330dp"
+        android:layout_width="174dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
@@ -65,20 +65,11 @@
             android:id="@+id/cancels_button"
             android:layout_width="154dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="#F61717"
             android:text="Cancel"
-            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
-
-        <Button
-            android:id="@+id/votes_button"
-            android:layout_width="149dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#FD2727"
-            android:text="Vote"
             tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
     </LinearLayout>

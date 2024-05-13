@@ -96,23 +96,11 @@
     <!-- Back and Home Buttons -->
     <LinearLayout
         android:id="@+id/button_layout"
-        android:layout_width="122dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="62dp"
         android:layout_height="65dp"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp">
 
-        <ImageButton
-            android:id="@+id/back_btn"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="16dp"
-            android:adjustViewBounds="true"
-            android:backgroundTint="#00FFFFFF"
-            android:scaleType="fitCenter"
-            android:src="@drawable/back_btn"
-            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/home_btn"
