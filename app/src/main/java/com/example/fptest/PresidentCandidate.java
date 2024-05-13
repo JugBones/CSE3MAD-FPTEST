@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
@@ -64,10 +65,11 @@ public class PresidentCandidate extends AppCompatActivity {
     }
 
     // Helper function to increment votes
-    private void incrementVote(DatabaseReference candidate1Votes) {
-        candidate1Votes.runTransaction(new Transaction.Handler() {
+    private void incrementVote(DatabaseReference candidateVotes) {
+        candidateVotes.runTransaction(new Transaction.Handler() {
+            @NonNull
             @Override
-            public Transaction.Result doTransaction(MutableData currentData) {
+            public Transaction.Result doTransaction(@NonNull MutableData currentData) {
                 Integer currentVotes = currentData.getValue(Integer.class);
                 if (currentVotes == null) {
                     currentVotes = 1;
