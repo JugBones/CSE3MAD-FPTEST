@@ -34,6 +34,8 @@ public class PresidentCandidate extends AppCompatActivity {
 
         // UI Button references
         Button view_profile = findViewById(R.id.view_button);
+        Button view_profile2 = findViewById(R.id.view2_button);
+        Button view_profile3 = findViewById(R.id.view3_button);
         Button vote_candidate1 = findViewById(R.id.vote_button);
         Button vote_candidate2 = findViewById(R.id.vote2_button);
         Button vote_candidate3 = findViewById(R.id.vote3_button);
@@ -42,6 +44,8 @@ public class PresidentCandidate extends AppCompatActivity {
 
         // Set up view profile button
         view_profile.setOnClickListener(v -> startActivity(new Intent(PresidentCandidate.this, ConfirmVote.class)));
+        view_profile2.setOnClickListener(v -> startActivity(new Intent(PresidentCandidate.this, ConfirmVote2.class)));
+        view_profile3.setOnClickListener(v -> startActivity(new Intent(PresidentCandidate.this, ConfirmVote3.class)));
 
         // Set up vote buttons for each candidate
         vote_candidate1.setOnClickListener(v -> {
