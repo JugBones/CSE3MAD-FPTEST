@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,6 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
 public class SignupActivity extends AppCompatActivity {
+    private static final String TAG = "SignupActivity";
     private FirebaseAuth auth;
     private FirebaseFirestore firestore;
     private EditText signupKtp, signupEmail, signupPassword;
@@ -73,6 +75,7 @@ public class SignupActivity extends AppCompatActivity {
                                         signupKtp.setError("KTP number is not registered in the allowed list");
                                     }
                                 } else {
+                                    Log.e(TAG, "Error checking allowed KTP number: ", task.getException());
                                     Toast.makeText(SignupActivity.this, "Error checking allowed KTP number", Toast.LENGTH_SHORT).show();
                                 }
                             }
@@ -103,6 +106,7 @@ public class SignupActivity extends AppCompatActivity {
                                 signupKtp.setError("KTP number is already registered");
                             }
                         } else {
+                            Log.e(TAG, "Error checking KTP number usage: ", task.getException());
                             Toast.makeText(SignupActivity.this, "Error checking KTP number usage", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -125,17 +129,18 @@ public class SignupActivity extends AppCompatActivity {
                                                 Toast.makeText(SignupActivity.this, "SignUp Successful", Toast.LENGTH_SHORT).show();
                                                 startActivity(new Intent(SignupActivity.this, LoginActivity.class));
                                             } else {
+                                                Log.e(TAG, "Error saving KTP number: ", task.getException());
                                                 Toast.makeText(SignupActivity.this, "Error saving KTP number", Toast.LENGTH_SHORT).show();
                                             }
                                         }
                                     });
                         } else {
+                            Log.e(TAG, "SignUp Failed: ", task.getException());
                             Toast.makeText(SignupActivity.this, "SignUp Failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
     }
-
 }
 
 class KTP {
