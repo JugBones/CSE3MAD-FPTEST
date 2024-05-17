@@ -76,7 +76,7 @@ public class SignupActivity extends AppCompatActivity {
                                     }
                                 } else {
                                     Log.e(TAG, "Error checking allowed KTP number: ", task.getException());
-                                    Toast.makeText(SignupActivity.this, "Error checking allowed KTP number", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(SignupActivity.this, "Error checking allowed KTP number: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
@@ -107,7 +107,7 @@ public class SignupActivity extends AppCompatActivity {
                             }
                         } else {
                             Log.e(TAG, "Error checking KTP number usage: ", task.getException());
-                            Toast.makeText(SignupActivity.this, "Error checking KTP number usage", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignupActivity.this, "Error checking KTP number usage: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -130,7 +130,7 @@ public class SignupActivity extends AppCompatActivity {
                                                 startActivity(new Intent(SignupActivity.this, LoginActivity.class));
                                             } else {
                                                 Log.e(TAG, "Error saving KTP number: ", task.getException());
-                                                Toast.makeText(SignupActivity.this, "Error saving KTP number", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(SignupActivity.this, "Error saving KTP number: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                             }
                                         }
                                     });
