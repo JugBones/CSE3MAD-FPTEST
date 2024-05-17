@@ -11,7 +11,7 @@ public class ConfirmVote3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_confirm_vote);
+        setContentView(R.layout.activity_confirm_vote3);
 
         Button cancel_btn = findViewById(R.id.cancels_button);
 

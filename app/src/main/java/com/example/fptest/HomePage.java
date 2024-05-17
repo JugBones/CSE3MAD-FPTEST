@@ -23,6 +23,7 @@ public class HomePage extends AppCompatActivity {
         // Find the ImageButtons
         ImageButton profileButton = findViewById(R.id.prof_btn);
         ImageButton scanButton = findViewById(R.id.scan_btn);
+        ImageButton livepolButton = findViewById(R.id.livepol_btn);
 
         // Set click listeners
         profileButton.setOnClickListener(v -> {
@@ -40,6 +41,12 @@ public class HomePage extends AppCompatActivity {
         scanButton.setOnClickListener(v -> {
             // Start the QRCodeActivity when the scan button is clicked
             Intent scanIntent = new Intent(HomePage.this, qrcodePage.class);
+            startActivity(scanIntent);
+        });
+
+        livepolButton.setOnClickListener(v -> {
+            // Start the QRCodeActivity when the scan button is clicked
+            Intent scanIntent = new Intent(HomePage.this, LivePolling.class);
             startActivity(scanIntent);
         });
     }
