@@ -40,9 +40,9 @@ public class ConfirmVote3 extends AppCompatActivity {
 
     private List<Integer> getImageList() {
         List<Integer> imageList = new ArrayList<>();
-        imageList.add(R.drawable.Ganjar1);
-        imageList.add(R.drawable.Ganjar2);
-        imageList.add(R.drawable.Ganjar3);
+        imageList.add(R.drawable.ganjar1);
+        imageList.add(R.drawable.ganjar2);
+        imageList.add(R.drawable.ganjar3);
         return imageList;
     }
 }

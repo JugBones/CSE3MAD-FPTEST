@@ -79,95 +79,96 @@
 
     <!-- Placeholder for DPR RI Elections -->
 
-    <LinearLayout
-        android:id="@+id/dpr_ri_layout"
-        android:layout_width="326dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/dpr_ri_layout"-->
+<!--        android:layout_width="326dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:orientation="vertical">-->
 
-        <TextView
-            android:id="@+id/dpr_ri_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DPR RI Elections"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            tools:ignore="HardcodedText,RtlHardcoded" />
+<!--        <TextView-->
+<!--            android:id="@+id/dpr_ri_text"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="DPR RI Elections"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="20sp"-->
+<!--            tools:ignore="HardcodedText,RtlHardcoded" />-->
 
-        <TextView
-            android:id="@+id/dpr_ri_candidate_count"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5 Candidates"
-            android:layout_marginLeft="10dp"
-            android:textColor="#ACABAB"
-            android:textSize="14sp"
-            tools:ignore="HardcodedText,RtlHardcoded" />
+<!--        <TextView-->
+<!--            android:id="@+id/dpr_ri_candidate_count"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="5 Candidates"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:textColor="#ACABAB"-->
+<!--            android:textSize="14sp"-->
+<!--            tools:ignore="HardcodedText,RtlHardcoded" />-->
 
-        <Button
-            android:id="@+id/dpr_ri_button"
-            android:layout_width="123dp"
-            android:layout_height="32dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#F81616"
-            android:text="View"
-            android:textSize="10sp"
-            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded,TouchTargetSizeCheck" />
+<!--        <Button-->
+<!--            android:id="@+id/dpr_ri_button"-->
+<!--            android:layout_width="123dp"-->
+<!--            android:layout_height="32dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:backgroundTint="#F81616"-->
+<!--            android:text="View"-->
+<!--            android:textSize="10sp"-->
+<!--            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded,TouchTargetSizeCheck" />-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-    <!-- Placeholder for DPRD Elections -->
-    <LinearLayout
-        android:id="@+id/dprd_layout"
-        android:layout_width="326dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
+<!--    &lt;!&ndash; Placeholder for DPRD Elections &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/dprd_layout"-->
+<!--        android:layout_width="326dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:orientation="vertical">-->
 
-        <TextView
-            android:id="@+id/dprd_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DPRD Elections"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            tools:ignore="HardcodedText,RtlHardcoded" />
+<!--        <TextView-->
+<!--            android:id="@+id/dprd_text"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="DPRD Elections"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="20sp"-->
+<!--            tools:ignore="HardcodedText,RtlHardcoded" />-->
 
-        <TextView
-            android:id="@+id/dprd_candidate_count"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4 Candidates"
-            android:textColor="#ACABAB"
-            android:layout_marginLeft="10dp"
-            android:textSize="14sp"
-            tools:ignore="HardcodedText,RtlHardcoded" />
+<!--        <TextView-->
+<!--            android:id="@+id/dprd_candidate_count"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="4 Candidates"-->
+<!--            android:textColor="#ACABAB"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:textSize="14sp"-->
+<!--            tools:ignore="HardcodedText,RtlHardcoded" />-->
 
-        <Button
-            android:id="@+id/dprd_button"
-            android:layout_width="123dp"
-            android:layout_height="32dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#F81616"
-            android:text="View"
-            android:textSize="10sp"
-            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded,TouchTargetSizeCheck" />
+<!--        <Button-->
+<!--            android:id="@+id/dprd_button"-->
+<!--            android:layout_width="123dp"-->
+<!--            android:layout_height="32dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:backgroundTint="#F81616"-->
+<!--            android:text="View"-->
+<!--            android:textSize="10sp"-->
+<!--            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded,TouchTargetSizeCheck" />-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
     <LinearLayout
         android:id="@+id/button_layout"
         android:layout_width="122dp"
         android:layout_height="83dp"
+        android:layout_marginTop="30sp"
         android:layout_gravity="center">
 
         <ImageButton

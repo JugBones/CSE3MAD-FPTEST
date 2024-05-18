@@ -111,13 +111,13 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="10dp"
-                app:srcCompat="@drawable/PKB"
+                app:srcCompat="@drawable/parkeba"
                 tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
 
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                app:srcCompat="@drawable/PKS"
+                app:srcCompat="@drawable/pks"
                 tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
         </LinearLayout>
 
