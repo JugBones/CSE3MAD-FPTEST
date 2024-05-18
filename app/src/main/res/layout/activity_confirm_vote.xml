@@ -1,77 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".successPasscode"
+    tools:context=".ConfirmVote"
     android:background="@drawable/background2">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="30sp"
-        app:srcCompat="@drawable/home"
-        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
-
-    <TextView
-        android:id="@+id/logo_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif"
-        android:text="Vote Confirmation"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:id="@+id/candidate1_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:text="1. Anies &amp; Muhaimin"
-        android:textColor="@color/white"
-        android:textSize="23sp"
-        tools:ignore="HardcodedText,RtlHardcoded" />
-
-    <ImageView
-        android:id="@+id/CandidateImg"
-        android:layout_width="219dp"
-        android:layout_height="175dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="30sp"
-        app:srcCompat="@drawable/candidate1"
-        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
-
-    <!-- Placeholder for Candidate 1 -->
     <LinearLayout
-        android:id="@+id/candidate1_layout"
-        android:layout_width="167dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal"
-        tools:ignore="TextSizeCheck">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <Button
-            android:id="@+id/cancels_button"
-            android:layout_width="154dp"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/home"
+            tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/logo_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text="Vote Confirmation"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/candidate1_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="1. Anies - Muhaimin"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/candidateImg"
+            android:layout_width="219dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/candidate1"
+            tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/description_anies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Anies Baswedan is the former Governor of Jakarta known for his contributions like creating Jakarta International Stadium (JIS) and the JakLingko transportation system."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/description_muhaimin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Muhaimin Iskandar, also known as Cak Imin, is a prominent Indonesian politician and leader of the National Awakening Party (PKB)."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/coalition_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Main Coalition Parties:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/nasdem"
+                tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/PKB"
+                tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/PKS"
+                tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/party_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:backgroundTint="#F61717"
-            android:text="Cancel"
-            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+            android:text="1. NasDem \n2. PKB \n3. PKS"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
 
+        <LinearLayout
+            android:id="@+id/candidate1_layout"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            tools:ignore="TextSizeCheck">
+
+            <Button
+                android:id="@+id/cancels_button"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#F61717"
+                android:text="Cancel"
+                tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+
+        </LinearLayout>
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

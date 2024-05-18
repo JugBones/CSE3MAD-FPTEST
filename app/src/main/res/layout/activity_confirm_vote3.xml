@@ -1,77 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".successPasscode"
+    tools:context=".ConfirmVote3"
     android:background="@drawable/background2">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="30sp"
-        app:srcCompat="@drawable/home"
-        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
-
-    <TextView
-        android:id="@+id/logo_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif"
-        android:text="Vote Confirmation"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:id="@+id/candidate3_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:text="3. Ganjar &amp; Mahfud"
-        android:textColor="@color/white"
-        android:textSize="23sp"
-        tools:ignore="HardcodedText,RtlHardcoded" />
-
-    <ImageView
-        android:id="@+id/Candidate3Img"
-        android:layout_width="219dp"
-        android:layout_height="175dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="30sp"
-        app:srcCompat="@drawable/candidate3"
-        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
-
-    <!-- Placeholder for Candidate 3 -->
     <LinearLayout
-        android:id="@+id/candidate3_layout"
-        android:layout_width="174dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal"
-        tools:ignore="TextSizeCheck">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <Button
-            android:id="@+id/cancels_button"
-            android:layout_width="154dp"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/home"
+            tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/logo_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text="Vote Confirmation"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/candidate3_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="3. Ganjar - Mahfud"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/candidate3Img"
+            android:layout_width="219dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/candidate3"
+            tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/description_ganjar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Ganjar Pranowo is an Indonesian politician and the current governor of Central Java."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/description_mahfud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Mahfud MD is an Indonesian politician and former Chief Justice of the Constitutional Court of Indonesia."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/coalition_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Main Coalition Parties:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/PDIP"
+                tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/PPP"
+                tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/perindo"
+                tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/party_list3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:backgroundTint="#F61717"
-            android:text="Cancel"
-            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+            android:text="1. PDIP\n2. PPP \n3. PERINDO "
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
 
+        <LinearLayout
+            android:id="@+id/candidate3_layout"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            tools:ignore="TextSizeCheck">
+
+            <Button
+                android:id="@+id/cancels_button"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#F61717"
+                android:text="Cancel"
+                tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+
+        </LinearLayout>
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

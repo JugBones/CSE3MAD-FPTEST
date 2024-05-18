@@ -1,77 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".successPasscode"
+    tools:context=".ConfirmVote2"
     android:background="@drawable/background2">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="30sp"
-        app:srcCompat="@drawable/home"
-        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
-
-    <TextView
-        android:id="@+id/logo_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif"
-        android:text="Vote Confirmation"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:id="@+id/candidate2_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:text="2. Prabowo &amp; Gibran"
-        android:textColor="@color/white"
-        android:textSize="23sp"
-        tools:ignore="HardcodedText,RtlHardcoded" />
-
-    <ImageView
-        android:id="@+id/Candidate2Img"
-        android:layout_width="219dp"
-        android:layout_height="175dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="30sp"
-        app:srcCompat="@drawable/candidate2"
-        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
-
-    <!-- Placeholder for Candidate 2 -->
     <LinearLayout
-        android:id="@+id/candidate2_layout"
-        android:layout_width="175dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal"
-        tools:ignore="TextSizeCheck">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <Button
-            android:id="@+id/cancels_button"
-            android:layout_width="154dp"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/home"
+            tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/logo_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text="Vote Confirmation"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/candidate2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="2. Prabowo - Gibran"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/candidate2Img"
+            android:layout_width="219dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/candidate2"
+            tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/description_prabowo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Prabowo Subianto is an Indonesian politician, businessman, and former lieutenant general in the Indonesian National Armed Forces."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/description_gibran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Gibran Rakabuming Raka is an Indonesian politician and the son of the current President of Indonesia, Joko Widodo. He is also the current mayor of Solo."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/coalition_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Main Coalition Parties:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/gerindra"
+                tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                app:srcCompat="@drawable/golkar"
+                tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/demokrat"
+                tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/party_list2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:backgroundTint="#F61717"
-            android:text="Cancel"
-            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+            android:text="1. Gerindra\n2. Golongan Karya \n3. Demokrat"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
 
+        <LinearLayout
+            android:id="@+id/candidate2_layout"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            tools:ignore="TextSizeCheck">
+
+            <Button
+                android:id="@+id/cancels_button"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#F61717"
+                android:text="Cancel"
+                tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+
+        </LinearLayout>
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>
