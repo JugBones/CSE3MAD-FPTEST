@@ -16,9 +16,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FPTEST"
         tools:targetApi="30">
-<!--        <activity-->
-<!--            android:name=".ViewPagerActivity"-->
-<!--            android:exported="false" />-->
+        <activity
+            android:name=".ViewLivePolling"
+            android:exported="false" />
+        <activity
+            android:name=".LivePolling3"
+            android:exported="false" />
+        <activity
+            android:name=".LivePolling2"
+            android:exported="false" />
+        <activity
+            android:name=".DpdCandidate"
+            android:exported="false" />
+        <activity
+            android:name=".DprCandidate"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".ViewPagerActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".ConfirmVote3"
             android:exported="false" />

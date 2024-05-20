@@ -46,7 +46,7 @@ public class HomePage extends AppCompatActivity {
 
         livepolButton.setOnClickListener(v -> {
             // Start the QRCodeActivity when the scan button is clicked
-            Intent scanIntent = new Intent(HomePage.this, LivePolling.class);
+            Intent scanIntent = new Intent(HomePage.this, ViewLivePolling.class);
             startActivity(scanIntent);
         });
     }

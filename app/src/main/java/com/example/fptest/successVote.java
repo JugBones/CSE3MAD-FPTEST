@@ -19,6 +19,6 @@ public class successVote extends AppCompatActivity {
         Button Poll_Btn = findViewById(R.id.goto_poll_btn);
 
         Home_Btn.setOnClickListener(v -> startActivity(new Intent(successVote.this, HomePage.class)));
-        Poll_Btn.setOnClickListener(v -> startActivity(new Intent(successVote.this, LivePolling.class)));
+        Poll_Btn.setOnClickListener(v -> startActivity(new Intent(successVote.this, ViewLivePolling.class)));
     }
 }
