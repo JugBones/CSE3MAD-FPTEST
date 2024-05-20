@@ -3,6 +3,8 @@ package com.example.fptest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
+import android.view.KeyEvent;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -17,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView signupRedirectText;
     private Button loginButton;
     private FirebaseAuth auth;
-    TextView forgotPassword;
+    private TextView forgotPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,31 @@ public class LoginActivity extends AppCompatActivity {
         signupRedirectText = findViewById(R.id.signUpRedirectText);
         forgotPassword = findViewById(R.id.forgot_password);
         auth = FirebaseAuth.getInstance();
+
+        loginEmail.setInputType(EditorInfo.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+        loginPassword.setInputType(EditorInfo.TYPE_TEXT_VARIATION_PASSWORD);
+
+        loginEmail.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    loginPassword.requestFocus();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        loginPassword.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    loginButton.performClick();
+                    return true;
+                }
+                return false;
+            }
+        });
 
         loginButton.setOnClickListener(v -> {
             String email = loginEmail.getText().toString();
@@ -48,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
             } else if (email.isEmpty()) {
                 loginEmail.setError("Empty fields are not allowed");
             } else {
-                loginEmail.setError("Please enter correct email");
+                loginEmail.setError("Please enter a correct email");
             }
         });
 

@@ -3,7 +3,10 @@ package com.example.fptest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Patterns;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,6 +23,8 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.regex.Pattern;
+
 public class SignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
     private FirebaseAuth auth;
@@ -27,6 +32,16 @@ public class SignupActivity extends AppCompatActivity {
     private EditText signupKtp, signupEmail, signupPassword;
     private Button signupButton;
     private TextView loginRedirectText;
+
+    private static final Pattern PASSWORD_PATTERN =
+            Pattern.compile("^" +
+                    "(?=.*[0-9])" +         // at least one digit
+                    "(?=.*[a-z])" +         // at least one lower case letter
+                    "(?=.*[A-Z])" +         // at least one upper case letter
+                    "(?=.*[@#$%^&+=])" +    // at least one special character
+                    "(?=\\S+$)" +           // no white spaces
+                    ".{6,12}" +             // between 6 and 12 characters
+                    "$");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +56,43 @@ public class SignupActivity extends AppCompatActivity {
         signupPassword = findViewById(R.id.signup_password);
         signupButton = findViewById(R.id.signup_button);
         loginRedirectText = findViewById(R.id.loginRedirectText);
+
+        signupKtp.setInputType(EditorInfo.TYPE_CLASS_TEXT);
+        signupEmail.setInputType(EditorInfo.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+        signupPassword.setInputType(EditorInfo.TYPE_TEXT_VARIATION_PASSWORD);
+
+        signupKtp.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    signupEmail.requestFocus();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        signupEmail.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    signupPassword.requestFocus();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        signupPassword.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    signupButton.performClick();
+                    return true;
+                }
+                return false;
+            }
+        });
 
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +111,10 @@ public class SignupActivity extends AppCompatActivity {
                 }
                 if (pass.isEmpty()) {
                     signupPassword.setError("Password cannot be empty");
+                    return;
+                }
+                if (!validatePassword(pass)) {
+                    signupPassword.setError("Password must be 6-12 characters long, include at least one capital letter, one digit, and one special character");
                     return;
                 }
 
@@ -91,6 +147,10 @@ public class SignupActivity extends AppCompatActivity {
                 startActivity(new Intent(SignupActivity.this, LoginActivity.class));
             }
         });
+    }
+
+    private boolean validatePassword(String password) {
+        return PASSWORD_PATTERN.matcher(password).matches();
     }
 
     private void checkKtpNumberUsage(String ktp, String user, String pass) {
