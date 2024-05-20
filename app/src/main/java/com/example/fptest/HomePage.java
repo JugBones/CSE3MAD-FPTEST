@@ -81,7 +81,7 @@ public class HomePage extends AppCompatActivity {
     private void showLivePollNotOpenPopup() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Live Polling Information");
-        builder.setMessage("Live polling will be available from 08:00 to 13:00. Please wait until the specified time.");
+        builder.setMessage("Live polling will be available after voting session (13.00). Please wait until the specified time.");
         builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
         builder.show();
     }
