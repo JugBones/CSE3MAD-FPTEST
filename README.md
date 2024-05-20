@@ -48,5 +48,5 @@
 
 <br/>
 <hr/>
-
+Link for the updated documents can be accessed via https://docs.google.com/document/d/1S_64F2JNZAR8ksna8dQI1KSTELu2onF--ZO6QeSGz1I/edit?usp=sharing
 <br/>
