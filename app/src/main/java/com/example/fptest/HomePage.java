@@ -17,8 +17,8 @@ public class HomePage extends AppCompatActivity {
     private FirebaseUser currentUser;
 
     // Constants for live polling time window
-    private static final int LIVE_POLLING_START_HOUR = 8;
-    private static final int LIVE_POLLING_END_HOUR = 13;
+    private static final int LIVE_POLLING_START_HOUR = 11;
+//    private static final int LIVE_POLLING_END_HOUR = 13;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,13 +75,13 @@ public class HomePage extends AppCompatActivity {
     private boolean isLivePollingTime() {
         Calendar calendar = Calendar.getInstance();
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
-        return hour >= LIVE_POLLING_START_HOUR && hour < LIVE_POLLING_END_HOUR;
+        return hour >= LIVE_POLLING_START_HOUR; // && hour < LIVE_POLLING_END_HOUR;
     }
 
     private void showLivePollNotOpenPopup() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Live Polling Information");
-        builder.setMessage("Live polling will be available after voting session (13.00). Please wait until the specified time.");
+        builder.setMessage("Live polling will be available after voting session. Please wait until the specified time.");
         builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
         builder.show();
     }

@@ -12,8 +12,8 @@ import java.util.Calendar;
 
 public class successVote extends AppCompatActivity {
 
-    private static final int VOTING_START_HOUR = 8;
-    private static final int VOTING_END_HOUR = 13;
+    private static final int VOTING_START_HOUR = 11;
+//    private static final int VOTING_END_HOUR = 13;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +37,13 @@ public class successVote extends AppCompatActivity {
     private boolean isVotingTime() {
         Calendar calendar = Calendar.getInstance();
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
-        return hour >= VOTING_START_HOUR && hour < VOTING_END_HOUR;
+        return hour >= VOTING_START_HOUR; //&& hour < VOTING_END_HOUR;
     }
 
     private void showVotingTimePopup() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Voting Session Information");
-        builder.setMessage("Voting will be available from 08:00 to 13:00. Live polling results will be available after 13:00.");
+        builder.setMessage("Voting will be available based on the specified time. Live polling results will be available soon.");
         builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
         builder.show();
     }
