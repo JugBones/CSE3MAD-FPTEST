@@ -46,7 +46,7 @@ public class ConfirmVoteDPR extends AppCompatActivity {
 
     private List<Integer> getImageList() {
         List<Integer> imageList = new ArrayList<>();
-        imageList.add(R.drawable.pkb1); // Add your actual drawable resource names
+        imageList.add(R.drawable.pkb1);
         imageList.add(R.drawable.pkb2);
         imageList.add(R.drawable.pkb3);
         imageList.add(R.drawable.pkb4);

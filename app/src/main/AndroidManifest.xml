@@ -17,6 +17,9 @@
         android:theme="@style/Theme.FPTEST"
         tools:targetApi="30">
         <activity
+            android:name=".ConfirmVoteDPR3"
+            android:exported="false" />
+        <activity
             android:name=".ConfirmVoteDPR2"
             android:exported="false" />
         <activity

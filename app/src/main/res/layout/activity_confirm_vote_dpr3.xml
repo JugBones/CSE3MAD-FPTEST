@@ -6,14 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ConfirmVoteDPR2"
+    tools:context=".ConfirmVoteDPR3"
     android:background="@drawable/background2">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:gravity="center_horizontal">
 
         <ImageView
             android:id="@+id/imageView"
@@ -44,7 +45,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="GERINDRA"
+            android:text="PDIP"
             android:textColor="@color/white"
             android:textSize="23sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
@@ -55,7 +56,7 @@
             android:layout_height="225dp"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            app:srcCompat="@drawable/gerindra"
+            app:srcCompat="@drawable/pdip"
             tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
 
         <com.example.fptest.JustifiedTextView
@@ -63,9 +64,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="The Great Indonesia Movement Party (Gerindra) is a political party in Indonesia established in 2008 by Prabowo Subianto. Gerindra focuses on nationalism, economic independence, and social justice. The party aims to strengthen Indonesia's sovereignty and promote the welfare of the Indonesian people through sustainable development and equitable distribution of resources."
+            android:text="The Indonesian Democratic Party of Struggle (PDIP) is a major political party in Indonesia founded in 1973 and re-established in 1998 under the leadership of Megawati Sukarnoputri. PDIP is known for its nationalist, populist, and social-democratic ideals, emphasizing the importance of national unity, economic sovereignty, and social justice."
             android:textColor="@color/white"
             android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
         <TextView
@@ -77,6 +79,7 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:layout_gravity="left"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
         <com.example.fptest.JustifiedTextView
@@ -84,9 +87,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="1. Prabowo Subianto:\nChairman of Gerindra and former Lieutenant General, known for his strong stance on national defense and economic independence.\n2. Ahmad Muzani: \nSecretary-General of Gerindra and Deputy Speaker of the DPR, advocating for social justice and rural development.\n3. Fadli Zon: \nVice Chairman of Gerindra, actively promoting democracy and human rights."
+            android:text="1. Ronny Talapessy:\nAn active member of PDIP known for his dedication to human rights and social justice.\n2. Puan Maharani: \nSpeaker of the DPR, focusing on educational reforms and women's empowerment.\n3. Ahmad Basarah: \nDeputy Speaker of the MPR, actively promoting national unity and legal reforms."
             android:textColor="@color/white"
             android:textSize="18sp"
+
+            android:layout_gravity="center_horizontal"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
         <TextView
@@ -98,6 +103,8 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:gravity="left"
+            android:layout_gravity="left"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
         <com.example.fptest.JustifiedTextView
@@ -105,9 +112,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="1. National Defense: \nGerindra has been vocal about strengthening Indonesia's military capabilities and ensuring national security.\n2. Economic Independence: \nThe party emphasizes reducing dependence on foreign aid and promoting local industries.\n3. Social Justice: \nGerindra advocates for policies that reduce income inequality and improve the welfare of marginalized communities."
+            android:text="1. Educational Reforms: \nPDIP has been a strong advocate for increasing educational budgets and improving access to quality education for all Indonesians.\n2. Women's Empowerment: \nThe party has implemented various programs aimed at promoting gender equality and empowering women in all sectors.\n3. Anti-Corruption: \nPDIP consistently supports policies and initiatives aimed at combating corruption and promoting transparency in government."
             android:textColor="@color/white"
             android:textSize="18sp"
+
             tools:ignore="HardcodedText,RtlHardcoded" />
 
         <androidx.viewpager2.widget.ViewPager2
