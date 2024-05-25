@@ -23,7 +23,7 @@ public class ConfirmVoteDPR2 extends AppCompatActivity {
 
         // Set up cancel button
         Button cancel_btn = findViewById(R.id.cancels_button);
-        cancel_btn.setOnClickListener(v -> startActivity(new Intent(ConfirmVoteDPR2.this, PresidentCandidate.class)));
+        cancel_btn.setOnClickListener(v -> startActivity(new Intent(ConfirmVoteDPR2.this, DprCandidate.class)));
 
         // Set up the descriptions
         JustifiedTextView descriptionParty = findViewById(R.id.description_party);

@@ -23,7 +23,7 @@ public class ConfirmVoteDPR4 extends AppCompatActivity {
 
         // Set up cancel button
         Button cancel_btn = findViewById(R.id.cancels_button);
-        cancel_btn.setOnClickListener(v -> startActivity(new Intent(ConfirmVoteDPR4.this, PresidentCandidate.class)));
+        cancel_btn.setOnClickListener(v -> startActivity(new Intent(ConfirmVoteDPR4.this, DprCandidate.class)));
 
         // Set up the descriptions
         JustifiedTextView descriptionParty = findViewById(R.id.description_party);
@@ -47,7 +47,6 @@ public class ConfirmVoteDPR4 extends AppCompatActivity {
     private List<Integer> getImageList() {
         List<Integer> imageList = new ArrayList<>();
         imageList.add(R.drawable.golkar1);
-        imageList.add(R.drawable.golk2);
         imageList.add(R.drawable.golkar3);
         imageList.add(R.drawable.golkar4);
         return imageList;

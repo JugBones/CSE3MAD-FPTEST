@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ConfirmVoteDPR2"
+    tools:context=".ConfirmVoteDPR"
     android:background="@drawable/background2">
 
     <LinearLayout
@@ -31,7 +31,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             android:fontFamily="sans-serif"
-            android:text="Political Party Information"
+            android:text="Candidate Information"
             android:textSize="30sp"
             android:textColor="@color/white"
             android:textStyle="bold"
@@ -41,10 +41,9 @@
             android:id="@+id/party_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="GERINDRA"
+            android:text="Ardi Putra Baramuli"
             android:textColor="@color/white"
             android:textSize="23sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
@@ -55,17 +54,18 @@
             android:layout_height="225dp"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            app:srcCompat="@drawable/gerindra"
+            app:srcCompat="@drawable/ardiputra"
             tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
 
-        <com.example.fptest.JustifiedTextView
+        <TextView
             android:id="@+id/description_party"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="The Great Indonesia Movement Party (Gerindra) is a political party in Indonesia established in 2008 by Prabowo Subianto. Gerindra focuses on nationalism, economic independence, and social justice. The party aims to strengthen Indonesia's sovereignty and promote the welfare of the Indonesian people through sustainable development and equitable distribution of resources."
             android:textColor="@color/white"
+            android:text="Ardi Putra Baramuli (born February 16, 1978) is a banker and politician. He is the grandson of an Indonesian political figure, AA Baramuli. He is active in various community organizations including the Baramuli Foundation Management which is engaged in Education and Social Affairs in North Sulawesi, South Sulawesi, and DKI Jakarta. In 2012, he established Yayasan Bersama Indonesia Satu which is engaged in sports, education and health for underprivileged Indonesian children in DKI Jakarta."
             android:textSize="18sp"
+            android:justificationMode="inter_word"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
         <TextView
@@ -73,21 +73,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Notable Candidates:"
+            android:text="Education Background:"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
-        <com.example.fptest.JustifiedTextView
+        <TextView
             android:id="@+id/notable_candidates"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="1. Prabowo Subianto:\nChairman of Gerindra and former Lieutenant General, known for his strong stance on national defense and economic independence.\n2. Ahmad Muzani: \nSecretary-General of Gerindra and Deputy Speaker of the DPR, advocating for social justice and rural development.\n3. Fadli Zon: \nVice Chairman of Gerindra, actively promoting democracy and human rights."
+            android:text="1. University of Technology Sydney (Australia) \n2. Strathclyde University (Glasgow, Skotlandia)"
             android:textColor="@color/white"
             android:textSize="18sp"
-            tools:ignore="HardcodedText,RtlHardcoded,TextContrastCheck" />
+            tools:ignore="HardcodedText,RtlHardcoded" />
 
         <TextView
             android:id="@+id/track_record_title"
@@ -100,14 +100,19 @@
             android:textStyle="bold"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
-        <com.example.fptest.JustifiedTextView
+        <TextView
             android:id="@+id/track_record"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="1. National Defense: \nGerindra has been vocal about strengthening Indonesia's military capabilities and ensuring national security.\n2. Economic Independence: \nThe party emphasizes reducing dependence on foreign aid and promoting local industries.\n3. Social Justice: \nGerindra advocates for policies that reduce income inequality and improve the welfare of marginalized communities."
+            android:text="1. Standard Chartered Bank, Global, International Graduate Associate Wholesale Banking, 2004-2006 \nStandard Chartered Bank, Indonesia, Associate Relationship Manager - Local Corporates, 2006-2007
+2. Permatabank Tbk, Indonesia, Business Planning Manager - Client Relationship Wholesale Bank, 2007-2009\n
+3. Permatabank Tbk, Indonesia, pjs Head Credit Policy, Process &amp; MIS - Wholesale Bank Risk, 2010\n
+4. PT Bank DBS Indonesia, Senior Relationship Manager - Account Mgt Instiitutional Banking, 2010\n
+5. PT Bank ANZ Indonesia, Business Portfolio Manager - Institutional Banking, 2010-2012\n
+6. PT ANZ Securities Indonesia, Director, 2012-sekarang"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="16sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
 
         <androidx.viewpager2.widget.ViewPager2
@@ -134,7 +139,7 @@
                 android:layout_marginTop="10dp"
                 android:backgroundTint="#F61717"
                 android:text="Cancel"
-                tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded,TextContrastCheck,TouchTargetSizeCheck" />
+                tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
 
         </LinearLayout>
     </LinearLayout>

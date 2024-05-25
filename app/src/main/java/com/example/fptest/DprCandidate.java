@@ -30,24 +30,24 @@ public class DprCandidate extends AppCompatActivity {
         candidate4Votes = FirebaseDatabase.getInstance().getReference("candidates/DprCandidate/dpr4/votes");
         candidate5Votes = FirebaseDatabase.getInstance().getReference("candidates/DprCandidate/dpr5/votes");
 
-//        Button view_button = findViewById(R.id.view_button);
+        Button view_button = findViewById(R.id.view_button);
         Button vote_button = findViewById(R.id.vote_button);
-//        Button view2_button = findViewById(R.id.view2_button);
+        Button view2_button = findViewById(R.id.view2_button);
         Button vote2_button = findViewById(R.id.vote2_button);
-//        Button view3_button = findViewById(R.id.view3_button);
+        Button view3_button = findViewById(R.id.view3_button);
         Button vote3_button = findViewById(R.id.vote3_button);
-//        Button view4_button = findViewById(R.id.view4_button);
+        Button view4_button = findViewById(R.id.view4_button);
         Button vote4_button = findViewById(R.id.vote4_button);
-//        Button view5_button = findViewById(R.id.view5_button);
+        Button view5_button = findViewById(R.id.view5_button);
         Button vote5_button = findViewById(R.id.vote5_button);
         ImageButton home_Btn = findViewById(R.id.home_btn);
         ImageButton back_Btn = findViewById(R.id.back_btn);
 
-//        view_button.setOnClickListener(v -> startActivity(new Intent(DprCandidate.this, test1.class)));
-//        view2_button.setOnClickListener(v -> startActivity(new Intent(DprCandidate.this, test2.class)));
-//        view3_button.setOnClickListener(v -> startActivity(new Intent(DprCandidate.this, test3.class)));
-//        view4_button.setOnClickListener(v -> startActivity(new Intent(DprCandidate.this, test4.class)));
-//        view5_button.setOnClickListener(v -> startActivity(new Intent(DprCandidate.this, test5.class)));
+        view_button.setOnClickListener(v -> startActivity(new Intent(DprCandidate.this, ConfirmVoteDPR3.class)));
+        view2_button.setOnClickListener(v -> startActivity(new Intent(DprCandidate.this, ConfirmVoteDPR.class)));
+        view3_button.setOnClickListener(v -> startActivity(new Intent(DprCandidate.this, ConfirmVoteDPR4.class)));
+        view4_button.setOnClickListener(v -> startActivity(new Intent(DprCandidate.this, ConfirmVoteDPR2.class)));
+        view5_button.setOnClickListener(v -> startActivity(new Intent(DprCandidate.this, ConfirmVoteDPR5.class)));
 
         vote_button.setOnClickListener(v -> castVote(candidate1Votes, "DPR"));
         vote2_button.setOnClickListener(v -> castVote(candidate2Votes, "DPR"));

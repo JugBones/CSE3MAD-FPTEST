@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:text="1. ARDI PUTRA BARAMULI"
+            android:text="1. Ardi Putra Baramuli"
             android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:text="2. Dr. (c). ZECKY ANDY ALATAS, S.H., M.H."
+            android:text="2. Hj. Fahira Idris"
             android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
@@ -130,7 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:text="3. SYAIFUDDIN"
+            android:text="3. Dailami Firdaus"
             android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
@@ -174,7 +174,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:text="4. ILYAS"
+            android:text="4. Ilyas"
             android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
@@ -218,7 +218,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:text="5. St. RAMSES BUTAR BUTAR, S.H., M.Kn."
+            android:text="5. Ramses Butar Butar"
             android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="HardcodedText,RtlHardcoded" />

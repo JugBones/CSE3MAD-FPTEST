@@ -17,6 +17,21 @@
         android:theme="@style/Theme.FPTEST"
         tools:targetApi="30">
         <activity
+            android:name=".ConfirmVoteDPD5"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmVoteDPD4"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmVoteDPD3"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmVoteDPD2"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmVoteDPD"
+            android:exported="false" />
+        <activity
             android:name=".ConfirmVoteDPR5"
             android:exported="false" />
         <activity
