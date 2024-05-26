@@ -1,9 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConfirmVoteDPD3">
+    android:orientation="vertical"
+    tools:context=".ConfirmVoteDPR"
+    android:background="@drawable/background2">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/home"
+            tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/logo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text="Candidate Information"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/party_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Dailami Firdaus"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/partyImg"
+            android:layout_width="269dp"
+            android:layout_height="225dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/dailamifirdaus"
+            tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/description_party"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="Prof. Dr. H. Dailami Firdaus, SH, LL.M., MBA. or more familiarly called Dailami (born December 12, 1964) is an Indonesian businessman and politician. Dailami is the grandson of a great Betawi cleric who was also the Chairman of the DKI Jakarta MUI in 1977-1984, KH Abdullah Syafi'i. Dailami is the son of KH Abdullah Syafi'i's eldest daughter, Tuty Alawiyah AS. Dailami is the Vice Chancellor II of As - Syafi'iyah Islamic University Jakarta."
+            android:textSize="18sp"
+            android:justificationMode="inter_word"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/notable_candidates_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Education Background:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/notable_candidates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="1. 1989 - Master of Law, The American Univesity, USA\n2. 1993 - Master in Business Administration, IBM, USA\n3. 1999 - S3, Universitas Negeri Jakarta, Jakarta"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/track_record_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Track Record:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/track_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="1. Anggota Dewan Pembina Yayasan Dakwah Indah Malaysia (YADIMI)\n2. Pengurus BAMUS Betawi\n3. Dewan Pertimbangan , Himpunan Pengusaha Pribumi (HIPPI) DKI Jakarta tahun 2012 – 2015\n4. Ketua Bidang Pendidikan, DPP Indonesia China Business Council (ICBC) tahun 2011 – 2015\n5. Ketua II, IKAT (Ikatan Alumni Lemhanas TOT) tahun 2012 – 2016."
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerParty"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:id="@+id/party_layout"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            tools:ignore="TextSizeCheck">
+
+            <Button
+                android:id="@+id/cancels_button"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#F61717"
+                android:text="Cancel"
+                tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

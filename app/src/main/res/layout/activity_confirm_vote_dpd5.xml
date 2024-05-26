@@ -1,9 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConfirmVoteDPD5">
+    android:orientation="vertical"
+    tools:context=".ConfirmVoteDPR"
+    android:background="@drawable/background2">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/home"
+            tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/logo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif"
+            android:text="Candidate Information"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/party_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Ramses Butar Butar"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/partyImg"
+            android:layout_width="269dp"
+            android:layout_height="225dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/ramsesbutar"
+            tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/description_party"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:text="Ramses Butarbutar, born in Porsea, Toba Regency, North Sumatra. He has lived in Jakarta since 1995, domiciled in West Jakarta. Throughout his career, he has been active in politics and economics, such as being the managing director of PT Senaesis Indonesia and now opening his own notary office. He plans to participate in the registration of DPD RI Candidates for DKI Jakarta Election. "
+            android:textSize="18sp"
+            android:justificationMode="inter_word"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/notable_candidates_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Education Background:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/notable_candidates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="1. 1989 - 1994 ; Fakultas Ekonomi, Sumatera Utara\n2. 2008 - 2012 ; Fakultas Hukum, UNTAG, Jakarta\n3. 2008 - S2 Hukum Magister Kenotariatan, Universitas Indonesia"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/track_record_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Track Record:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/track_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="1. Ketua Bidang Organisasi IKATAN NOTARIS INDONESIA Pengda Karawang\n2. pengurus Bidang Hubungan antar Lembaga IKATAN NOTARIS INDONESIA Pengwil Jawa Barat\n3. Anggota aktif PERSAUDARAAN MASYARAKAT PORSEA SEKITARNYA ( PMPS )\n4. Ketua Umum DPP Saudagar Muda Minang\n5. Ketua Badan Audit HKBP SE-DKI Jakarta"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerParty"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:id="@+id/party_layout"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            tools:ignore="TextSizeCheck">
+
+            <Button
+                android:id="@+id/cancels_button"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#F61717"
+                android:text="Cancel"
+                tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,RtlHardcoded" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

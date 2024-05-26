@@ -174,7 +174,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:text="4. Ilyas"
+            android:text="4. Ilyas Abdullah"
             android:textColor="@color/white"
             android:textSize="20sp"
             tools:ignore="HardcodedText,RtlHardcoded" />
