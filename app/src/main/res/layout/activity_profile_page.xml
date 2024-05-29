@@ -53,24 +53,24 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <!-- KTP Number -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="KTP Number"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                tools:ignore="HardcodedText" />
+<!--            &lt;!&ndash; KTP Number &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="KTP Number"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textStyle="bold"-->
+<!--                tools:ignore="HardcodedText" />-->
 
-            <TextView
-                android:id="@+id/ktp_number_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:backgroundTint="@color/black"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/ktp_number_text"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:backgroundTint="@color/black"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="16sp" />-->
 
             <!-- KTP Image -->
             <ImageView

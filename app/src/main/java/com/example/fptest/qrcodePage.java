@@ -15,11 +15,11 @@ import com.google.zxing.integration.android.IntentResult;
 
 import java.util.Calendar;
 
-
 public class qrcodePage extends AppCompatActivity {
 
     private static final int VOTING_START_HOUR = 10;
     private static final int VOTING_END_HOUR = 11;
+    private static final String ALLOWED_QR_CONTENT = "IndonesiaDecides";
     Button scanner_btn;
     TextView textView;
 
@@ -34,11 +34,6 @@ public class qrcodePage extends AppCompatActivity {
 
         Home_Btn.setOnClickListener(v -> startActivity(new Intent(qrcodePage.this, HomePage.class)));
         scanner_btn.setOnClickListener(v -> {
-//            IntentIntegrator intentIntegrator = new IntentIntegrator(qrcodePage.this);
-//            intentIntegrator.setOrientationLocked(true);
-//            intentIntegrator.setPrompt("Scan a QR Code");
-//            intentIntegrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE);
-//            intentIntegrator.initiateScan();
             if (isVotingSession()) {
                 IntentIntegrator intentIntegrator = new IntentIntegrator(qrcodePage.this);
                 intentIntegrator.setOrientationLocked(true);
@@ -57,10 +52,14 @@ public class qrcodePage extends AppCompatActivity {
         if (intentResult != null) {
             String contents = intentResult.getContents();
             if (contents != null) {
-                // Start the OnGoingElections activity with the scanned data
-                Intent intent = new Intent(qrcodePage.this, OnGoingElections.class);
-                intent.putExtra("QR_DATA", contents);
-                startActivity(intent);
+                if (contents.equals(ALLOWED_QR_CONTENT)) { // Check if the scanned QR code matches the allowed content
+                    // Start the OnGoingElections activity with the scanned data
+                    Intent intent = new Intent(qrcodePage.this, OnGoingElections.class);
+                    intent.putExtra("QR_DATA", contents);
+                    startActivity(intent);
+                } else {
+                    showInvalidQRCodeMessage(); // Show message if the QR code is not the allowed one
+                }
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);
@@ -70,13 +69,21 @@ public class qrcodePage extends AppCompatActivity {
     private boolean isVotingSession() {
         Calendar calendar = Calendar.getInstance();
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
-        return hour >= VOTING_START_HOUR; //&& hour < VOTING_END_HOUR;
+        return hour >= VOTING_START_HOUR && hour < VOTING_END_HOUR;
     }
 
     private void showVoteSession() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Voting Session Information");
         builder.setMessage("Voting will be available based on the specified time. Live polling results will be available soon.");
+        builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
+        builder.show();
+    }
+
+    private void showInvalidQRCodeMessage() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Invalid QR Code");
+        builder.setMessage("The scanned QR code is not valid. Please scan the correct QR code.");
         builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
         builder.show();
     }

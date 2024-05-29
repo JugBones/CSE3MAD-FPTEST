@@ -89,7 +89,7 @@ public class ProfilePage extends AppCompatActivity {
         // Handle logout
         logoutButton.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(ProfilePage.this, LoginActivity.class));
+            startActivity(new Intent(ProfilePage.this, MainActivity.class));
             finish();
         });
 

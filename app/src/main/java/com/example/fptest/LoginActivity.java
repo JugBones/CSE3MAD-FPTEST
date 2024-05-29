@@ -2,7 +2,6 @@ package com.example.fptest;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Patterns;
 import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
@@ -19,7 +18,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView signupRedirectText;
     private Button loginButton;
     private FirebaseAuth auth;
-    private TextView forgotPassword;
+//    private TextView forgotPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         loginPassword = findViewById(R.id.login_password);
         loginButton = findViewById(R.id.login_button);
         signupRedirectText = findViewById(R.id.signUpRedirectText);
-        forgotPassword = findViewById(R.id.forgot_password);
+//        forgotPassword = findViewById(R.id.forgot_password);
         auth = FirebaseAuth.getInstance();
 
         loginEmail.setInputType(EditorInfo.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
@@ -61,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(v -> {
             String email = loginEmail.getText().toString();
             String pass = loginPassword.getText().toString();
-            if (!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            if (!email.isEmpty() && isEmail(email)) {
                 if (!pass.isEmpty()) {
                     auth.signInWithEmailAndPassword(email, pass)
                             .addOnSuccessListener(authResult -> {
@@ -81,8 +80,13 @@ public class LoginActivity extends AppCompatActivity {
 
         signupRedirectText.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, SignupActivity.class)));
 
-        forgotPassword.setOnClickListener(view -> {
-            // Forgot password functionality
-        });
+//        forgotPassword.setOnClickListener(view -> {
+//            // Forgot password functionality
+//        });
+    }
+
+    static boolean isEmail(String email) {
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        return email.matches(emailPattern);
     }
 }

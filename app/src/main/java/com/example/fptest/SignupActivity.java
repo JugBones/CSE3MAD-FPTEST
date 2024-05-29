@@ -3,7 +3,6 @@ package com.example.fptest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.util.Patterns;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -109,6 +108,10 @@ public class SignupActivity extends AppCompatActivity {
                     signupEmail.setError("Email cannot be empty");
                     return;
                 }
+                if (!isEmailValid(user)) {
+                    signupEmail.setError("Invalid email format");
+                    return;
+                }
                 if (pass.isEmpty()) {
                     signupPassword.setError("Password cannot be empty");
                     return;
@@ -149,7 +152,7 @@ public class SignupActivity extends AppCompatActivity {
         });
     }
 
-    private boolean validatePassword(String password) {
+    static boolean validatePassword(String password) {
         return PASSWORD_PATTERN.matcher(password).matches();
     }
 
@@ -203,6 +206,10 @@ public class SignupActivity extends AppCompatActivity {
                     }
                 });
     }
+    static boolean isEmailValid(String email) {
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        return email.matches(emailPattern);
+    }
 }
 
 class KTP {
@@ -220,3 +227,4 @@ class KTP {
         this.ktp = ktp;
     }
 }
+
