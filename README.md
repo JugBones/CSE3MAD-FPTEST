@@ -10,6 +10,14 @@
 
 <div align="center">
  
+ - This repo is dedicated to our final project developing voting elections mobile app, called **Indonesia Decides**
+
+ </div>
+
+ <br/>
+
+<div align="center">
+ 
  🔭 We're currently studying at **Binus International University**
  
  🌱 We're currently majoring in **Computer Science**
