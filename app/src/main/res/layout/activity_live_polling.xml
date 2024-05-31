@@ -33,6 +33,27 @@
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
+    <Spinner
+        android:id="@+id/chartTypeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:entries="@array/chart_types" />
+
+    <!-- Pie Chart -->
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="gone" />
+
+    <!-- Bar Chart -->
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="gone" />
+
     <!-- Candidate 1 Results -->
     <TextView
         android:id="@+id/candidate1_text"
@@ -100,7 +121,6 @@
         android:layout_height="65dp"
         android:layout_gravity="center"
         android:layout_marginTop="15dp">
-
 
         <ImageButton
             android:id="@+id/home_btn"

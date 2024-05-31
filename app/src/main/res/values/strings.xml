@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Vote.Inc</string>
+
+    <string-array name="chart_types">
+        <item>Pie Chart</item>
+        <item>Bar Chart</item>
+    </string-array>
 </resources>

@@ -2,64 +2,74 @@ package com.example.fptest;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 public class LivePolling extends AppCompatActivity {
 
-    // TextViews to display the votes and percentages for each candidate
     private TextView candidate1TextView, candidate2TextView, candidate3TextView;
+    private PieChart pieChart;
+    private BarChart barChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_polling);
 
-        // Initialize TextViews
         candidate1TextView = findViewById(R.id.candidate1TextView);
         candidate2TextView = findViewById(R.id.candidate2TextView);
         candidate3TextView = findViewById(R.id.candidate3TextView);
         ImageButton home_Btn = findViewById(R.id.home_btn);
+        pieChart = findViewById(R.id.pieChart);
+        barChart = findViewById(R.id.barChart);
+        Spinner chartTypeSpinner = findViewById(R.id.chartTypeSpinner);
 
         home_Btn.setOnClickListener(v -> startActivity(new Intent(LivePolling.this, HomePage.class)));
 
-        // Reference to the "election/candidates" node in Firebase
         DatabaseReference candidatesRef = FirebaseDatabase.getInstance().getReference("candidates/PresCandidates");
 
-        // Attach a ValueEventListener to the database reference
         candidatesRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
-                // Get the votes for each candidate directly from the snapshot
                 Integer candidate1Votes = snapshot.child("candidate1/votes").getValue(Integer.class);
                 Integer candidate2Votes = snapshot.child("candidate2/votes").getValue(Integer.class);
                 Integer candidate3Votes = snapshot.child("candidate3/votes").getValue(Integer.class);
 
-                // Ensure no null values are returned
                 candidate1Votes = (candidate1Votes != null) ? candidate1Votes : 0;
                 candidate2Votes = (candidate2Votes != null) ? candidate2Votes : 0;
                 candidate3Votes = (candidate3Votes != null) ? candidate3Votes : 0;
 
-                // Calculate the total votes
                 int totalVotes = candidate1Votes + candidate2Votes + candidate3Votes;
-
-                // Avoid division by zero
                 double percentageCandidate1 = totalVotes == 0 ? 0 : (double) candidate1Votes / totalVotes * 100;
                 double percentageCandidate2 = totalVotes == 0 ? 0 : (double) candidate2Votes / totalVotes * 100;
                 double percentageCandidate3 = totalVotes == 0 ? 0 : (double) candidate3Votes / totalVotes * 100;
 
-                // Update the TextViews with votes and percentages
                 candidate1TextView.setText(String.format("Candidate 1: %d votes (%.2f%%)", candidate1Votes, percentageCandidate1));
                 candidate2TextView.setText(String.format("Candidate 2: %d votes (%.2f%%)", candidate2Votes, percentageCandidate2));
                 candidate3TextView.setText(String.format("Candidate 3: %d votes (%.2f%%)", candidate3Votes, percentageCandidate3));
+
+                updateCharts(candidate1Votes, candidate2Votes, candidate3Votes);
             }
 
             @Override
@@ -67,6 +77,48 @@ public class LivePolling extends AppCompatActivity {
                 // Handle potential errors (e.g., logging the error)
             }
         });
+
+        chartTypeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 0: // Pie Chart
+                        pieChart.setVisibility(View.VISIBLE);
+                        barChart.setVisibility(View.GONE);
+                        break;
+                    case 1: // Bar Chart
+                        pieChart.setVisibility(View.GONE);
+                        barChart.setVisibility(View.VISIBLE);
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // No action needed
+            }
+        });
+    }
+
+    private void updateCharts(int candidate1Votes, int candidate2Votes, int candidate3Votes) {
+        ArrayList<PieEntry> pieEntries = new ArrayList<>();
+        pieEntries.add(new PieEntry(candidate1Votes, "Candidate 1"));
+        pieEntries.add(new PieEntry(candidate2Votes, "Candidate 2"));
+        pieEntries.add(new PieEntry(candidate3Votes, "Candidate 3"));
+
+        PieDataSet pieDataSet = new PieDataSet(pieEntries, "Votes");
+        PieData pieData = new PieData(pieDataSet);
+        pieChart.setData(pieData);
+        pieChart.invalidate();
+
+        ArrayList<BarEntry> barEntries = new ArrayList<>();
+        barEntries.add(new BarEntry(1, candidate1Votes));
+        barEntries.add(new BarEntry(2, candidate2Votes));
+        barEntries.add(new BarEntry(3, candidate3Votes));
+
+        BarDataSet barDataSet = new BarDataSet(barEntries, "Votes");
+        BarData barData = new BarData(barDataSet);
+        barChart.setData(barData);
+        barChart.invalidate();
     }
 }
-
