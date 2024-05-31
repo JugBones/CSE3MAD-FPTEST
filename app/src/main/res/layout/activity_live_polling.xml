@@ -1,139 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/background2"
     tools:context=".LivePolling">
 
-    <!-- Logo Image -->
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="30sp"
-        app:srcCompat="@drawable/home"
-        tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
-
-    <!-- Heading -->
-    <TextView
-        android:id="@+id/logo_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif"
-        android:text="Live Polling Results"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" />
-
-    <Spinner
-        android:id="@+id/chartTypeSpinner"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_margin="20dp"
-        android:entries="@array/chart_types" />
+        android:layout_height="match_parent">
 
-    <!-- Pie Chart -->
-    <com.github.mikephil.charting.charts.PieChart
-        android:id="@+id/pieChart"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:visibility="gone" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <!-- Bar Chart -->
-    <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/barChart"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:visibility="gone" />
+            <!-- Logo Image -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30sp"
+                app:srcCompat="@drawable/home"
+                tools:ignore="ContentDescription,ImageContrastCheck,MissingConstraints" />
 
-    <!-- Candidate 1 Results -->
-    <TextView
-        android:id="@+id/candidate1_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Candidate 1: Anies - Muhaimin"
-        android:textColor="@color/white"
-        android:textSize="23sp"
-        tools:ignore="HardcodedText,RtlHardcoded" />
+            <!-- Heading -->
+            <TextView
+                android:id="@+id/logo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif"
+                android:text="Live Polling Results"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
-    <TextView
-        android:id="@+id/candidate1TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+            <!-- Spinner to choose chart type -->
+            <Spinner
+                android:id="@+id/chartTypeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="20dp"
+                android:entries="@array/chart_types" />
 
-    <!-- Candidate 2 Results -->
-    <TextView
-        android:id="@+id/candidate2_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Candidate 2: Prabowo - Gibran"
-        android:textColor="@color/white"
-        android:textSize="23sp"
-        tools:ignore="HardcodedText,RtlHardcoded" />
+            <!-- Pie Chart -->
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:visibility="gone" />
 
-    <TextView
-        android:id="@+id/candidate2TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+            <!-- Bar Chart -->
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barChart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:visibility="gone" />
 
-    <!-- Candidate 3 Results -->
-    <TextView
-        android:id="@+id/candidate3_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Candidate 3: Ganjar - Mahfud"
-        android:textColor="@color/white"
-        android:textSize="23sp"
-        tools:ignore="HardcodedText,RtlHardcoded" />
+            <!-- Candidate 1 Results -->
+            <TextView
+                android:id="@+id/candidate1_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Candidate 1: Anies - Muhaimin"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                tools:ignore="HardcodedText,RtlHardcoded" />
 
-    <TextView
-        android:id="@+id/candidate3TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
+            <TextView
+                android:id="@+id/candidate1TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-    <!-- Back and Home Buttons -->
-    <LinearLayout
-        android:id="@+id/button_layout"
-        android:layout_width="62dp"
-        android:layout_height="65dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp">
+            <!-- Candidate 2 Results -->
+            <TextView
+                android:id="@+id/candidate2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Candidate 2: Prabowo - Gibran"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                tools:ignore="HardcodedText,RtlHardcoded" />
 
-        <ImageButton
-            android:id="@+id/home_btn"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="16dp"
-            android:adjustViewBounds="true"
-            android:backgroundTint="#00FFFFFF"
-            android:scaleType="fitCenter"
-            android:src="@drawable/home_btn"
-            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+            <TextView
+                android:id="@+id/candidate2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-    </LinearLayout>
-</LinearLayout>
+            <!-- Candidate 3 Results -->
+            <TextView
+                android:id="@+id/candidate3_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Candidate 3: Ganjar - Mahfud"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/candidate3TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <!-- Back and Home Buttons -->
+            <LinearLayout
+                android:id="@+id/button_layout"
+                android:layout_width="62dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp">
+
+                <ImageButton
+                    android:id="@+id/home_btn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="16dp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/home_btn"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

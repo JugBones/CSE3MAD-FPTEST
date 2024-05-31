@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
@@ -31,6 +32,9 @@ public class LivePolling extends AppCompatActivity {
     private TextView candidate1TextView, candidate2TextView, candidate3TextView;
     private PieChart pieChart;
     private BarChart barChart;
+
+    // Different colors for each candidates
+    private int[] candidateColors = {0xFFE57373, 0xFF81C784, 0xFF64B5F6};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,11 +69,11 @@ public class LivePolling extends AppCompatActivity {
                 double percentageCandidate2 = totalVotes == 0 ? 0 : (double) candidate2Votes / totalVotes * 100;
                 double percentageCandidate3 = totalVotes == 0 ? 0 : (double) candidate3Votes / totalVotes * 100;
 
-                candidate1TextView.setText(String.format("Candidate 1: %d votes (%.2f%%)", candidate1Votes, percentageCandidate1));
-                candidate2TextView.setText(String.format("Candidate 2: %d votes (%.2f%%)", candidate2Votes, percentageCandidate2));
-                candidate3TextView.setText(String.format("Candidate 3: %d votes (%.2f%%)", candidate3Votes, percentageCandidate3));
+                candidate1TextView.setText(String.format("Candidate 1: %d votes (%.0f%%)", candidate1Votes, percentageCandidate1));
+                candidate2TextView.setText(String.format("Candidate 2: %d votes (%.0f%%)", candidate2Votes, percentageCandidate2));
+                candidate3TextView.setText(String.format("Candidate 3: %d votes (%.0f%%)", candidate3Votes, percentageCandidate3));
 
-                updateCharts(candidate1Votes, candidate2Votes, candidate3Votes);
+                updateCharts(candidate1Votes, candidate2Votes, candidate3Votes, percentageCandidate1, percentageCandidate2, percentageCandidate3);
             }
 
             @Override
@@ -100,15 +104,21 @@ public class LivePolling extends AppCompatActivity {
         });
     }
 
-    private void updateCharts(int candidate1Votes, int candidate2Votes, int candidate3Votes) {
+    private void updateCharts(int candidate1Votes, int candidate2Votes, int candidate3Votes, double percentageCandidate1, double percentageCandidate2, double percentageCandidate3) {
         ArrayList<PieEntry> pieEntries = new ArrayList<>();
-        pieEntries.add(new PieEntry(candidate1Votes, "Candidate 1"));
-        pieEntries.add(new PieEntry(candidate2Votes, "Candidate 2"));
-        pieEntries.add(new PieEntry(candidate3Votes, "Candidate 3"));
+        pieEntries.add(new PieEntry((float) percentageCandidate1, "Candidate 1"));
+        pieEntries.add(new PieEntry((float) percentageCandidate2, "Candidate 2"));
+        pieEntries.add(new PieEntry((float) percentageCandidate3, "Candidate 3"));
 
         PieDataSet pieDataSet = new PieDataSet(pieEntries, "Votes");
+        pieDataSet.setColors(candidateColors);
+        pieDataSet.setValueTextColor(0xFFFFFFFF); // White text color for values
         PieData pieData = new PieData(pieDataSet);
         pieChart.setData(pieData);
+        pieChart.setEntryLabelColor(0xFFFFFFFF); // White text color for entry labels
+        pieChart.getDescription().setEnabled(false);
+        Legend pieLegend = pieChart.getLegend();
+        pieLegend.setTextColor(0xFFFFFFFF); // White text color for legend
         pieChart.invalidate();
 
         ArrayList<BarEntry> barEntries = new ArrayList<>();
@@ -117,8 +127,14 @@ public class LivePolling extends AppCompatActivity {
         barEntries.add(new BarEntry(3, candidate3Votes));
 
         BarDataSet barDataSet = new BarDataSet(barEntries, "Votes");
+        barDataSet.setColors(candidateColors);
         BarData barData = new BarData(barDataSet);
+        barData.setValueTextSize(12f);
+        barData.setValueTextColor(0xFFFFFFFF); // White text color for values
         barChart.setData(barData);
+        barChart.getDescription().setEnabled(false);
+        Legend barLegend = barChart.getLegend();
+        barLegend.setTextColor(0xFFFFFFFF); // White text color for legend
         barChart.invalidate();
     }
 }
