@@ -10,7 +10,7 @@
 
 <div align="center">
  
- - This repo is dedicated to our final project developing voting elections mobile app, called **Indonesia Decides**
+ - This repo is dedicated to our final project developing voting elections mobile app, called **Vote.inc**
 
  </div>
 
