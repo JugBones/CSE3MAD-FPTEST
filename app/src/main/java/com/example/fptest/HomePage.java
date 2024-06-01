@@ -17,7 +17,7 @@ public class HomePage extends AppCompatActivity {
     private FirebaseUser currentUser;
 
     // Constants for live polling time window
-    private static final int LIVE_POLLING_START_HOUR = 11;
+    private static final int LIVE_POLLING_START_HOUR = 22;
 //    private static final int LIVE_POLLING_END_HOUR = 13;
 
     @Override

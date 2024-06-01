@@ -21,9 +21,11 @@ public class successVote extends AppCompatActivity {
         setContentView(R.layout.activity_success_vote);
 
         ImageButton Home_Btn = findViewById(R.id.home_btn);
+        ImageButton Back_Btn = findViewById(R.id.back_btn);
         Button Poll_Btn = findViewById(R.id.goto_poll_btn);
 
         Home_Btn.setOnClickListener(v -> startActivity(new Intent(successVote.this, HomePage.class)));
+        Back_Btn.setOnClickListener(v -> startActivity(new Intent(successVote.this, OnGoingElections.class)));
 
         Poll_Btn.setOnClickListener(v -> {
             if (isVotingTime()) {
