@@ -5,11 +5,20 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.*;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.MutableData;
+import com.google.firebase.database.Transaction;
+import com.google.firebase.database.ValueEventListener;
 
 public class DprCandidate extends AppCompatActivity {
 
@@ -49,14 +58,23 @@ public class DprCandidate extends AppCompatActivity {
         view4_button.setOnClickListener(v -> startActivity(new Intent(DprCandidate.this, ConfirmVoteDPR2.class)));
         view5_button.setOnClickListener(v -> startActivity(new Intent(DprCandidate.this, ConfirmVoteDPR5.class)));
 
-        vote_button.setOnClickListener(v -> castVote(candidate1Votes, "DPR"));
-        vote2_button.setOnClickListener(v -> castVote(candidate2Votes, "DPR"));
-        vote3_button.setOnClickListener(v -> castVote(candidate3Votes, "DPR"));
-        vote4_button.setOnClickListener(v -> castVote(candidate4Votes, "DPR"));
-        vote5_button.setOnClickListener(v -> castVote(candidate5Votes, "DPR"));
+        vote_button.setOnClickListener(v -> showConfirmationDialog(candidate1Votes, "DPR"));
+        vote2_button.setOnClickListener(v -> showConfirmationDialog(candidate2Votes, "DPR"));
+        vote3_button.setOnClickListener(v -> showConfirmationDialog(candidate3Votes, "DPR"));
+        vote4_button.setOnClickListener(v -> showConfirmationDialog(candidate4Votes, "DPR"));
+        vote5_button.setOnClickListener(v -> showConfirmationDialog(candidate5Votes, "DPR"));
 
         home_Btn.setOnClickListener(v -> startActivity(new Intent(DprCandidate.this, HomePage.class)));
         back_Btn.setOnClickListener(v -> startActivity(new Intent(DprCandidate.this, OnGoingElections.class)));
+    }
+
+    private void showConfirmationDialog(DatabaseReference candidateVotes, String category) {
+        new AlertDialog.Builder(this)
+                .setTitle("Vote Confirmation")
+                .setMessage("Are you sure you want to vote for this candidate?")
+                .setPositiveButton("Yes", (dialog, which) -> castVote(candidateVotes, category))
+                .setNegativeButton("No", null)
+                .show();
     }
 
     private void castVote(DatabaseReference candidateVotes, String category) {

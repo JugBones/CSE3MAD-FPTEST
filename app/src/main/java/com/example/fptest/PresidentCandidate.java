@@ -7,6 +7,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -61,13 +62,23 @@ public class PresidentCandidate extends AppCompatActivity {
         view_profile3.setOnClickListener(v -> startActivity(new Intent(PresidentCandidate.this, ConfirmVote3.class)));
 
         // Set up vote buttons for each candidate
-        vote_candidate1.setOnClickListener(v -> castVote(candidate1Votes));
-        vote_candidate2.setOnClickListener(v -> castVote(candidate2Votes));
-        vote_candidate3.setOnClickListener(v -> castVote(candidate3Votes));
+        vote_candidate1.setOnClickListener(v -> showConfirmationDialog(candidate1Votes));
+        vote_candidate2.setOnClickListener(v -> showConfirmationDialog(candidate2Votes));
+        vote_candidate3.setOnClickListener(v -> showConfirmationDialog(candidate3Votes));
 
         // Set up home and back buttons
         home_Btn.setOnClickListener(v -> startActivity(new Intent(PresidentCandidate.this, HomePage.class)));
         back_Btn.setOnClickListener(v -> startActivity(new Intent(PresidentCandidate.this, OnGoingElections.class)));
+    }
+
+    // Helper function to show the confirmation dialog
+    private void showConfirmationDialog(DatabaseReference candidateVotes) {
+        new AlertDialog.Builder(this)
+                .setTitle("Vote Confirmation")
+                .setMessage("Are you sure you want to vote for this candidate?")
+                .setPositiveButton("Yes", (dialog, which) -> castVote(candidateVotes))
+                .setNegativeButton("No", null)
+                .show();
     }
 
     // Helper function to cast a vote

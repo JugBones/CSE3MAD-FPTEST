@@ -12,7 +12,7 @@ import java.util.Calendar;
 
 public class successVote extends AppCompatActivity {
 
-    private static final int VOTING_START_HOUR = 11;
+    private static final int VOTING_START_HOUR = 8;
 //    private static final int VOTING_END_HOUR = 13;
 
     @Override

@@ -17,8 +17,8 @@ import java.util.Calendar;
 
 public class qrcodePage extends AppCompatActivity {
 
-    private static final int VOTING_START_HOUR = 22;
-    private static final int VOTING_END_HOUR = 23;
+    private static final int VOTING_START_HOUR = 19;
+    private static final int VOTING_END_HOUR = 21;
     private static final String ALLOWED_QR_CONTENT = "IndonesiaDecides";
     Button scanner_btn;
     TextView textView;
